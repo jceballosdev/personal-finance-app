@@ -1,0 +1,21 @@
+{
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": "angular",
+      "infile": "CHANGELOG.md"
+    }
+  },
+  "git": {
+    "requireBranch": "main",
+    "tagName": "v${version}",
+    "commitMessage": "chore(release): ${version}",
+    "requireCleanWorkingDir": true,
+    "changelog": "git log --pretty=format:'* %s (%h)' ${latestTag}...HEAD"
+  },
+  "hooks": {
+    "before:init": ["npm run format", "npm run lint", "npm run test:unit"],
+    "after:bump": "echo bumped to ${version}",
+    "after:git:release": "echo released ${version}",
+    "before:git:release": "conventional-changelog -p angular -i CHANGELOG.md -s"
+  }
+}
