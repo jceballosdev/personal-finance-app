@@ -1,5 +1,3 @@
-import { Button } from './components/Button';
-
 /**
  * The main application component that renders the primary content.
  * @returns {React.ReactElement} The main application component.
@@ -12,7 +10,6 @@ function App(): React.ReactElement {
   return (
     <main>
       <h1>React App</h1>
-      <Button>Click me</Button>
     </main>
   );
 }

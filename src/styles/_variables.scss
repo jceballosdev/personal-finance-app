@@ -1,8 +1,56 @@
 // Typography
-$font-family-base: inter, system-ui, avenir, helvetica, arial, sans-serif;
-$font-size-base: 16px;
-$line-height-base: 1.5;
-$font-weight-regular: 400;
-$font-weight-medium: 500;
-$font-weight-semi-bold: 600;
-$font-weight-bold: 700;
+$font-family: 'Public Sans', sans-serif;
+
+// Line heights
+$leading-normal: 1.5;
+$leading-tight: 1.2;
+
+// Font weights
+$font-regular: 400;
+$font-bold: 700;
+
+// Font styles
+$no-italic: normal;
+$italic: italic;
+
+// Font sizes
+$text-xs: 0.75rem;
+$text-sm: 0.875rem;
+$text-base: 1rem;
+$text-lg: 1.25rem;
+$text-xl: 2rem;
+
+// Colors
+$white: #fff;
+$black: #000;
+$beige-100: #f8f4f0;
+$beige-500: #98908b;
+$grey-100: #f2f2f2;
+$grey-300: #b3b3b3;
+$grey-500: #696868;
+$grey-900: #201f24;
+$gold: #cab361;
+$yellow: #f2cdac;
+$orange: #be6c49;
+$brown: #93674f;
+$red: #c94736;
+$magenta: #934f6f;
+$purple: #826cb0;
+$violet: #a781ba;
+$blue: #3f82b2;
+$cyan: #82c9d7;
+$turquoise: #597c7c;
+$green: #277c78;
+$army-green: #7f9161;
+$navy-grey: #97a0ac;
+$navy: #626070;
+
+// Spacing
+$spacing-50: 0.25rem;
+$spacing-100: 0.5rem;
+$spacing-150: 0.75rem;
+$spacing-200: 1rem;
+$spacing-250: 1.25rem;
+$spacing-300: 1.5rem;
+$spacing-400: 2rem;
+$spacing-500: 2.5rem;
