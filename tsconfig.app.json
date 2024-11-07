@@ -26,11 +26,13 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
-      "@components/*": ["src/components/*"]
+      "@styles/*": ["src/styles/*"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
     },
 
     /* types */
-    "types": ["vitest/globals"]
+    "types": ["vite/client","vitest/globals"]
   },
   "include": ["src"]
 }

@@ -1,0 +1,25 @@
+@use '../../variables' as variables;
+
+.avatar {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  display: inline-block;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &.sm {
+    width: variables.$spacing-400;
+  }
+
+  &.lg {
+    width: variables.$spacing-500;
+  }
+
+  &.circle {
+    border-radius: 50%;
+  }
+}
