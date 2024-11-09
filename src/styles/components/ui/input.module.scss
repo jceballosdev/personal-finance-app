@@ -1,0 +1,74 @@
+@use '@styles/variables' as variables;
+
+.input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-50;
+  color: variables.$grey-500;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: variables.$spacing-150 variables.$spacing-250;
+  border: 1px solid variables.$beige-500;
+  border-radius: variables.$spacing-100;
+  transition: border-color 0.3s;
+
+  &:focus {
+    outline: none;
+    border-color: variables.$grey-900;
+  }
+
+  &::placeholder {
+    font-family: variables.$font-family;
+    color: variables.$beige-500;
+  }
+}
+
+.prefix {
+  position: absolute;
+  left: variables.$spacing-250;
+  color: variables.$beige-500;
+  pointer-events: none;
+}
+
+.icon {
+  position: absolute;
+  right: variables.$spacing-250;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  color: variables.$grey-900;
+}
+
+.with-prefix {
+  padding-left: calc(variables.$spacing-250 + variables.$spacing-150 + 1ch);
+}
+
+.error {
+  border-color: variables.$red;
+
+  &:focus {
+    border-color: variables.$red;
+  }
+}
+
+.input-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-text-helper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

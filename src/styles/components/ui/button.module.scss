@@ -1,0 +1,105 @@
+@use '@styles/variables' as variables;
+@use 'sass:color';
+
+@mixin button(
+  $padding: variables.$spacing-200,
+  $border-radius: variables.$spacing-100,
+  $gap: variables.$spacing-150
+) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+  padding: $padding;
+  cursor: pointer;
+  border-radius: $border-radius;
+  border: 1px solid;
+  transition: all 0.3s ease-in-out;
+}
+
+.primary {
+  @include button;
+
+  background-color: variables.$grey-900;
+  color: variables.$white;
+  border-color: transparent;
+
+  &:hover {
+    background-color: variables.$grey-500;
+  }
+}
+
+.secondary {
+  @include button;
+
+  background-color: variables.$beige-100;
+  color: variables.$grey-900;
+  border-color: transparent;
+
+  &:hover {
+    background-color: variables.$white;
+    border-color: variables.$grey-500;
+  }
+}
+
+.destroy {
+  @include button;
+
+  background-color: variables.$red;
+  color: variables.$white;
+  border-color: transparent;
+
+  &:hover {
+    background-color: color.adjust(variables.$red, $lightness: 20%);
+  }
+}
+
+.tertiary {
+  @include button($padding: 0, $border-radius: 0);
+
+  color: variables.$grey-500;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    color: variables.$grey-900;
+  }
+}
+
+.pagination {
+  @include button(
+    $padding: variables.$spacing-200,
+    $border-radius: variables.$spacing-100
+  );
+
+  height: variables.$spacing-500;
+  color: variables.$grey-900;
+  background-color: transparent;
+  border-color: variables.$beige-500;
+
+  &:hover {
+    color: variables.$white;
+    background-color: variables.$beige-500;
+    border-color: variables.$beige-500;
+  }
+
+  &.current {
+    background-color: variables.$grey-900;
+    color: variables.$white;
+    border-color: variables.$grey-900;
+
+    &:hover {
+      background-color: variables.$grey-900;
+      border-color: variables.$grey-900;
+    }
+  }
+
+  &.squared {
+    aspect-ratio: 1/1;
+  }
+
+  &[disabled] {
+    cursor: auto;
+    opacity: 0;
+  }
+}

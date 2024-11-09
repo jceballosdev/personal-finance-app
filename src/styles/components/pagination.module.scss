@@ -1,0 +1,16 @@
+@use '@styles/variables' as variables;
+
+.pagination {
+  width: 100%;
+  max-width: 582px;
+  padding-top: variables.$spacing-300;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pages {
+  display: flex;
+  align-items: center;
+  gap: variables.$spacing-100;
+}

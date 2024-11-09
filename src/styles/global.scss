@@ -1,6 +1,7 @@
 @use 'variables' as *;
 @use 'fonts' as *;
 @use 'reset' as *;
+@use 'mixins' as *;
 
 main {
   width: 100%;

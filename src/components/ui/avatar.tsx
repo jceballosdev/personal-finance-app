@@ -2,6 +2,7 @@ import { AvatarType } from '@/types';
 import styles from '@styles/components/ui/avatar.module.scss';
 import React from 'react';
 import avatarPlaceholder from '@/assets/images/avatar-placeholder.png';
+import { classNames } from '@/utils';
 
 export interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   name: AvatarType | string;
@@ -38,8 +39,10 @@ const Avatar: React.FC<AvatarProps> = ({
   const avatar = loadAvatarPath(name);
   const finalSrc = hasError || !avatar ? avatarPlaceholder : avatar;
 
+  const style = classNames(styles.avatar, styles[size], styles[shape]);
+
   return (
-    <figure className={`${styles.avatar} ${styles[size]} ${styles[shape]}`}>
+    <figure className={style}>
       <img
         src={finalSrc}
         alt={`Avatar of ${user}`}

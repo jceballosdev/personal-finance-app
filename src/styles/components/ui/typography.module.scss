@@ -1,0 +1,88 @@
+@use '@styles/variables' as variables;
+@use '@styles/mixins' as mixins;
+
+.title {
+  @include mixins.typography;
+
+  font-weight: variables.$font-bold;
+  display: block;
+}
+
+.h1 {
+  font-size: variables.$text-xl;
+  line-height: variables.$leading-tight;
+}
+
+.h2 {
+  font-size: variables.$text-lg;
+  line-height: variables.$leading-tight;
+}
+
+.h3 {
+  font-size: variables.$text-base;
+  line-height: variables.$leading-tight;
+}
+
+.paragraph {
+  @include mixins.typography;
+
+  font-weight: variables.$font-regular;
+  line-height: variables.$leading-normal;
+  display: block;
+}
+
+.text {
+  @include mixins.typography;
+
+  font-weight: variables.$font-regular;
+  line-height: variables.$leading-normal;
+  display: inline;
+}
+
+.italic {
+  font-style: variables.$italic;
+}
+
+.strong {
+  font-weight: variables.$font-bold;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.small {
+  font-size: variables.$text-xs;
+}
+
+.normal {
+  font-size: variables.$text-sm;
+}
+
+.success {
+  color: variables.$green;
+}
+
+.danger {
+  color: variables.$red;
+}
+
+.warning {
+  color: variables.$yellow;
+}

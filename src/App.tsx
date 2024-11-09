@@ -1,31 +1,22 @@
-// import { NavBudgetsIcon } from "./assets/icons";
-
-import { Icon, Image, Avatar } from './components/ui';
-import authenticationImage from './assets/images/illustration-authentication.svg';
+import React from 'react';
+import { Input } from './components/ui';
 
 function App(): React.ReactElement {
   return (
     <main>
       <h1>React App</h1>
-      <div>
-        <Icon name="bill-paid" size={16} />
-      </div>
-      <div>
-        <Image
-          src={authenticationImage}
-          alt="Authentication"
-          width={360}
-          height={720}
-        />
-      </div>
-      <br />
-      <div>
-        <Avatar
-          name="ella-phillip"
-          user="Ella Phillips"
-          shape="circle"
-          size="sm"
-        />
+      <div
+        style={{
+          display: 'flex',
+          gap: '2rem',
+          alignItems: 'center',
+          justifyContent: 'center',
+          marginTop: '2rem',
+          width: '100%',
+          maxWidth: '400px',
+        }}
+      >
+        <Input name="basic" placeholder="Placeholder" label="Basic Field" />
       </div>
     </main>
   );

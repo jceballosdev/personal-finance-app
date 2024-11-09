@@ -1,0 +1,6 @@
+@use 'variables' as variables;
+
+@mixin typography {
+  font-family: variables.$font-family;
+  letter-spacing: 0;
+}
